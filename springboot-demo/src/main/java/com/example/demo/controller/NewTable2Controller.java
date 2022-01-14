@@ -73,7 +73,7 @@ public class NewTable2Controller {
         /*String url = "http://bigdata.test.yonghui.cn/data-rd-hub/api/common/node/create";*/
         HttpHeaders headers = new HttpHeaders();  //调用万维网http协议，能够实现接口调用的http请求
         //定义请求参数类型，这里用json所以是MediaType.APPLICATION_JSON
-        headers.setContentType(MediaType.APPLICATION_JSON);//post提交数据
+        headers.setContentType(MediaType.APPLICATION_JSON);//post提交数据 APPLICATION_FORM_URLENCODED_VALUE
         headers.add("orgCode", "sjcas000001");//添加组织组织ID
         headers.add("token", token);//引用全局token
         HttpEntity<CreateDto> request = new HttpEntity<>(createDto1, headers);
@@ -237,8 +237,6 @@ public class NewTable2Controller {
 
                     if (result.containsKey("code")) {
                         if ( result.getJSONObject("data").toString().equals("0000000")) {
-
-
                             String url3 = "http://10.251.129.24/approval/approval/center/process?currentPage=1&pageSize=10&organizationCode=sjcas000001&submitter=80900867";
                             HttpHeaders headers3 = new HttpHeaders();
                             //定义请求参数类型，这里用json所以是MediaType.APPLICATION_JSON

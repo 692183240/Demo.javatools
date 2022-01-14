@@ -54,7 +54,7 @@ public class ESTableController {
                 .engineVersion("1")//
                 .esDatasourceId("39007")//数据源
                 .esDynamicType(1)//索引类型   1 普通表 2 动态表
-                .esReplicasNum(2)//分片
+                .esReplicasNum(2)//分片cx
                 .esShardsNum(2)//副本
                 .esType("doc")
                 .nodeId(nodeId)
